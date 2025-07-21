@@ -1,0 +1,18 @@
+Automated Pipeline Task Management
+
+About this Module:
+This module automates the repetitive tasks involved in the hiring process—such as candidate filtering, taking specific actions on candidates, sending reminders, automatically moving candidates to the next stage, sending offer letters, and more.
+
+All of these actions can be triggered by writing simple task queries directly from the UI, significantly reducing the time and effort needed to manage them manually.
+I've shared a small set of backend-related code samples from this module. Below are some key technical highlights:
+
+Console Commands: Used to perform CRON-based tasks like sending reminders to users and similar background activities.
+Redis Queues: Background processing is handled via Redis queues, using Jobs to execute tasks asynchronously.
+Observers: We use model/entity observers to track and react to changes in the system.
+Events & Listeners: Applied for decoupling logic and managing background tasks efficiently.
+Traits (SOLID Principles): Traits are used to maintain single-responsibility functionalities, keeping the code clean and modular.
+Foundation/Collection: Common functionalities are centralized here for reuse and better code organization.
+HTTP Controllers: All APIs are managed through the Http/Controllers layer.
+Request Validation: Input validations are handled through Http/Requests classes.
+
+Thanks!
